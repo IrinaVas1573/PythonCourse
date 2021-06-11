@@ -1,0 +1,33 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 82
+    length: 1
+    placeholder_text: Укажи имя переменной
+  - offset: 91
+    length: 15
+    placeholder_text: Вставь текст
+  - offset: 117
+    length: 15
+    placeholder_text: Вставь текст
+  - offset: 134
+    length: 1
+    placeholder_text: Укажи имя переменной
+  - offset: 143
+    length: 1
+    placeholder_text: Укажи мя переменной
+  - offset: 146
+    length: 3
+    placeholder_text: Вставь текст
+  - offset: 151
+    length: 1
+    placeholder_text: Укажи имя переменной
+  - offset: 195
+    length: 6
+    placeholder_text: Укажи параметр разделителя
+- name: __init__.py
+  visible: false
+- name: tests/output.txt
+  visible: false
