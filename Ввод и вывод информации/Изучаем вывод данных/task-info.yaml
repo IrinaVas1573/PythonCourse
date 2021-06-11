@@ -3,28 +3,28 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 82
+  - offset: 137
     length: 1
     placeholder_text: Укажи имя переменной
-  - offset: 91
+  - offset: 146
     length: 15
     placeholder_text: Вставь текст
-  - offset: 117
+  - offset: 172
     length: 15
     placeholder_text: Вставь текст
-  - offset: 134
+  - offset: 189
     length: 1
     placeholder_text: Укажи имя переменной
-  - offset: 143
+  - offset: 198
     length: 1
     placeholder_text: Укажи мя переменной
-  - offset: 146
+  - offset: 201
     length: 3
     placeholder_text: Вставь текст
-  - offset: 151
+  - offset: 206
     length: 1
     placeholder_text: Укажи имя переменной
-  - offset: 195
+  - offset: 250
     length: 6
     placeholder_text: Укажи параметр разделителя
 - name: __init__.py

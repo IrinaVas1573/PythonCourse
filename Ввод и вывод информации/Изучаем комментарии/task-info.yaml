@@ -1,18 +1,12 @@
 type: output
 files:
-- name: main.py
-  visible: true
-  placeholders:
-  - offset: 24
-    length: 1
-    placeholder_text: ''
-  - offset: 91
-    length: 1
-    placeholder_text: ''
-  - offset: 119
-    length: 1
-    placeholder_text: ''
 - name: __init__.py
   visible: false
 - name: tests/output.txt
   visible: false
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 192
+    length: 40
+    placeholder_text: Здесь должен быть комментарий с хештегом

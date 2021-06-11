@@ -1,0 +1,20 @@
+type: edu
+files:
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 83
+    length: 12
+    placeholder_text: Получить число белочек
+  - offset: 100
+    length: 12
+    placeholder_text: Получить число орешков
+  - offset: 113
+    length: 11
+    placeholder_text: Вывести результат
+- name: tests/test_task.py
+  visible: false
+- name: __init__.py
+  visible: false
+- name: tests/__init__.py
+  visible: false

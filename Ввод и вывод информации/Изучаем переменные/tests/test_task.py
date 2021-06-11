@@ -1,22 +1,32 @@
+import os
 import unittest
 import subprocess
 
 # from ..task import num, AxBy, TU154, it10, _AbbA, This_and_that
 # answer = " ".join([num, AxBy, TU154, it10, _AbbA, This_and_that])
-with open('task.py') as fout:
-    with open('tests\\taskTest.py', 'w') as f:
+with open(os.path.join(os.getcwd(), os.pardir, "task.py")) as fout:
+    with open(os.path.join(os.getcwd(), "taskTest.py"), 'w') as f:
         f.write(fout.read())
         f.write('''
 print(num,AxBy,TU154,it10,_AbbA,This_and_that)
 #         ''')
-answer = ""
+
 
 # todo: replace this with an actual test
 class TestCase(unittest.TestCase):
-    def test_print(self):
-        subpr1 = subprocess.Popen(["python", "tests\\taskTest.py"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        printOut = subpr1.stdout.read()
+    def someStreamCreatingProcess(self, stream1, streamdata):
+        stream1.write(bytes(str(streamdata)+"\n", encoding='utf-8'))
+        stream1.close()
+    def CheckTask(self, data):
+        subpr1 = subprocess.Popen(["python", os.path.join(os.getcwd(), "taskTest.py")], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        TestCase.someStreamCreatingProcess(self, subpr1.stdin, data)
+        chek = subpr1.wait()
         err = subpr1.stderr.read()
+        out1 = subpr1.stdout.read()
         subpr1.kill()
-        print(err)
-        self.assertEqual(printOut, answer, msg="Сообщение!")
+        if err:
+            return err.decode("utf-8")
+        else:
+            return out1.decode("utf-8").strip()
+    def test_print(self):
+        self.assertEqual(self.CheckTask(""), "5 mama Fly cool 8 1010", msg="Тест 1")
